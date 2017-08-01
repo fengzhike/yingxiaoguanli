@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>market_management</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(197, 200, 198); overflow: auto; background-color: rgb(29, 31, 33); }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(155, 160, 157); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: white; }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(155, 160, 157); border-color: rgb(67, 72, 76); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top: 2px dashed rgb(67, 72, 76); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(67, 72, 76); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(48, 51, 55); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(39, 41, 44); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(67, 72, 76) rgb(67, 72, 76) rgb(53, 57, 60); background-color: rgb(48, 51, 55); }
+.markdown-preview[data-use-github-style] { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); overflow: scroll; background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; border: 0px none; background-color: rgb(231, 231, 231); }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left: 4px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { border-top: 1px solid rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; border-radius: 3px; background-color: rgba(0, 0, 0, 0.0392157); }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; border: 0px; background: transparent; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; border-radius: 3px; background-color: rgb(247, 247, 247); }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; border: 0px; background-color: transparent; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; background-color: rgb(252, 252, 252); }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .horizontal-scrollbar { visibility: visible; }
+.markdown-preview .task-list-item-checkbox { position: absolute; margin: 0.25em 0px 0px -1.4em; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+.spell-check-corrections {
+  width: 25em !important;
+}
+
+pre.editor-colors {
+  background-color: #1d1f21;
+  color: #c5c8c6;
+}
+pre.editor-colors .invisible-character {
+  color: rgba(197, 200, 198, 0.2);
+}
+pre.editor-colors .indent-guide {
+  color: rgba(197, 200, 198, 0.2);
+}
+pre.editor-colors .wrap-guide {
+  background-color: rgba(197, 200, 198, 0.1);
+}
+pre.editor-colors .gutter {
+  background-color: #292c2f;
+}
+pre.editor-colors .gutter .cursor-line {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+pre.editor-colors .line-number.cursor-line-no-selection {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+pre.editor-colors .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+pre.editor-colors .fold-marker:after {
+  color: #fba0e3;
+}
+pre.editor-colors .invisible {
+  color: #c5c8c6;
+}
+pre.editor-colors .cursor {
+  border-color: white;
+}
+pre.editor-colors .selection .region {
+  background-color: #444;
+}
+pre.editor-colors .bracket-matcher .region {
+  border-bottom: 1px solid #f8de7e;
+  margin-top: -1px;
+  opacity: .7;
+}
+pre.editor-colors .syntax--source.syntax--gfm {
+  color: #999;
+}
+pre.editor-colors .syntax--gfm .syntax--markup.syntax--heading {
+  color: #eee;
+}
+pre.editor-colors .syntax--gfm .syntax--link {
+  color: #555;
+}
+pre.editor-colors .syntax--gfm .syntax--variable.syntax--list,
+pre.editor-colors .syntax--gfm .syntax--support.syntax--quote {
+  color: #555;
+}
+pre.editor-colors .syntax--gfm .syntax--link .syntax--entity {
+  color: #ddd;
+}
+pre.editor-colors .syntax--gfm .syntax--raw {
+  color: #aaa;
+}
+pre.editor-colors .syntax--markdown .syntax--paragraph {
+  color: #999;
+}
+pre.editor-colors .syntax--markdown .syntax--heading {
+  color: #eee;
+}
+pre.editor-colors .syntax--markdown .syntax--raw {
+  color: #aaa;
+}
+pre.editor-colors .syntax--markdown .syntax--link {
+  color: #555;
+}
+pre.editor-colors .syntax--markdown .syntax--link .syntax--string {
+  color: #555;
+}
+pre.editor-colors .syntax--markdown .syntax--link .syntax--string.syntax--title {
+  color: #ddd;
+}
+.syntax--comment {
+  color: #7C7C7C;
+}
+.syntax--entity {
+  color: #FFD2A7;
+}
+.syntax--entity.syntax--name.syntax--type {
+  text-decoration: underline;
+  color: #FFFFB6;
+}
+.syntax--entity.syntax--other.syntax--inherited-class {
+  color: #9B5C2E;
+}
+.syntax--keyword {
+  color: #96CBFE;
+}
+.syntax--keyword.syntax--control {
+  color: #96CBFE;
+}
+.syntax--keyword.syntax--operator {
+  color: #EDEDED;
+}
+.syntax--storage {
+  color: #CFCB90;
+}
+.syntax--storage.syntax--modifier {
+  color: #96CBFE;
+}
+.syntax--constant {
+  color: #99CC99;
+}
+.syntax--constant.syntax--numeric {
+  color: #FF73FD;
+}
+.syntax--variable {
+  color: #C6C5FE;
+}
+.syntax--invalid.syntax--deprecated {
+  text-decoration: underline;
+  color: #FD5FF1;
+}
+.syntax--invalid.syntax--illegal {
+  color: #FD5FF1;
+  background-color: rgba(86, 45, 86, 0.75);
+}
+.syntax--string .syntax--source,
+.syntax--string .syntax--meta.syntax--embedded.syntax--line {
+  color: #EDEDED;
+}
+.syntax--string .syntax--punctuation.syntax--section.syntax--embedded {
+  color: #00A0A0;
+}
+.syntax--string .syntax--punctuation.syntax--section.syntax--embedded .syntax--source {
+  color: #00A0A0;
+}
+.syntax--string {
+  color: #A8FF60;
+}
+.syntax--string .syntax--constant {
+  color: #00A0A0;
+}
+.syntax--string.syntax--regexp {
+  color: #E9C062;
+}
+.syntax--string.syntax--regexp .syntax--constant.syntax--character.syntax--escape,
+.syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded,
+.syntax--string.syntax--regexp .syntax--string.syntax--regexp.syntax--arbitrary-repetition {
+  color: #FF8000;
+}
+.syntax--string.syntax--regexp.syntax--group {
+  color: #C6A24F;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+.syntax--string.syntax--regexp.syntax--character-class {
+  color: #B18A3D;
+}
+.syntax--string .syntax--variable {
+  color: #8A9A95;
+}
+.syntax--support {
+  color: #FFFFB6;
+}
+.syntax--support.syntax--function {
+  color: #DAD085;
+}
+.syntax--support.syntax--constant {
+  color: #FFD2A7;
+}
+.syntax--support.syntax--type.syntax--property-name.syntax--css {
+  color: #EDEDED;
+}
+.syntax--source .syntax--entity.syntax--name.syntax--tag,
+.syntax--source .syntax--punctuation.syntax--tag {
+  color: #96CBFE;
+}
+.syntax--source .syntax--entity.syntax--other.syntax--attribute-name {
+  color: #C6C5FE;
+}
+.syntax--entity.syntax--other.syntax--attribute-name {
+  color: #C6C5FE;
+}
+.syntax--entity.syntax--name.syntax--tag.syntax--namespace,
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--namespace {
+  color: #E18964;
+}
+.syntax--meta.syntax--preprocessor.syntax--c {
+  color: #8996A8;
+}
+.syntax--meta.syntax--preprocessor.syntax--c .syntax--keyword {
+  color: #AFC4DB;
+}
+.syntax--meta.syntax--cast {
+  color: #676767;
+}
+.syntax--meta.syntax--sgml.syntax--html .syntax--meta.syntax--doctype,
+.syntax--meta.syntax--sgml.syntax--html .syntax--meta.syntax--doctype .syntax--entity,
+.syntax--meta.syntax--sgml.syntax--html .syntax--meta.syntax--doctype .syntax--string,
+.syntax--meta.syntax--xml-processing,
+.syntax--meta.syntax--xml-processing .syntax--entity,
+.syntax--meta.syntax--xml-processing .syntax--string {
+  color: #494949;
+}
+.syntax--meta.syntax--tag .syntax--entity,
+.syntax--meta.syntax--tag > .syntax--punctuation,
+.syntax--meta.syntax--tag.syntax--inline .syntax--entity {
+  color: #C6C5FE;
+}
+.syntax--meta.syntax--tag .syntax--name,
+.syntax--meta.syntax--tag.syntax--inline .syntax--name,
+.syntax--meta.syntax--tag > .syntax--punctuation {
+  color: #96CBFE;
+}
+.syntax--meta.syntax--selector.syntax--css .syntax--entity.syntax--name.syntax--tag {
+  text-decoration: underline;
+  color: #96CBFE;
+}
+.syntax--meta.syntax--selector.syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--tag.syntax--pseudo-class {
+  color: #8F9D6A;
+}
+.syntax--meta.syntax--selector.syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+  color: #8B98AB;
+}
+.syntax--meta.syntax--selector.syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--class {
+  color: #62B1FE;
+}
+.syntax--meta.syntax--property-group .syntax--support.syntax--constant.syntax--property-value.syntax--css,
+.syntax--meta.syntax--property-value .syntax--support.syntax--constant.syntax--property-value.syntax--css {
+  color: #F9EE98;
+}
+.syntax--meta.syntax--preprocessor.syntax--at-rule .syntax--keyword.syntax--control.syntax--at-rule {
+  color: #8693A5;
+}
+.syntax--meta.syntax--property-value .syntax--support.syntax--constant.syntax--named-color.syntax--css,
+.syntax--meta.syntax--property-value .syntax--constant {
+  color: #87C38A;
+}
+.syntax--meta.syntax--constructor.syntax--argument.syntax--css {
+  color: #8F9D6A;
+}
+.syntax--meta.syntax--diff,
+.syntax--meta.syntax--diff.syntax--header {
+  color: #F8F8F8;
+  background-color: #0E2231;
+}
+.syntax--meta.syntax--separator {
+  color: #60A633;
+  background-color: #242424;
+}
+.syntax--meta.syntax--line.syntax--entry.syntax--logfile,
+.syntax--meta.syntax--line.syntax--exit.syntax--logfile {
+  background-color: rgba(238, 238, 238, 0.16);
+}
+.syntax--meta.syntax--line.syntax--error.syntax--logfile {
+  background-color: #751012;
+}
+</style>
+  </head>
+  <body class='markdown-preview' data-use-github-style><h1 id="-">营销管理</h1>
+<h2 id="-14-">学习材料：《营销管理：第14版：全球版（美华管理人才学校 图书馆）》</h2>
+<h2 id="-">章节及主讲人：</h2>
+<ul>
+<li><p>第一篇：理解营销管理</p>
+<p>第二篇：获取营销洞察</p>
+<p>范顺凯</p>
+</li>
+<li><p>第三篇  了解认识顾客</p>
+<p>第四篇  培育强大品牌</p>
+<p>赵谦</p>
+</li>
+<li><p>第三篇  开发市场供应物</p>
+<p>第四篇  交付价值</p>
+<p>张亮</p>
+</li>
+<li><p>第七篇  传播价值</p>
+<p>第八篇  实现成功的长期成长</p>
+<p>霍春刚</p>
+</li>
+</ul>
+<h2 id="-">为什么学习本书</h2>
+<ol>
+<li><p>本书有什么内容</p>
+<p> 现在的产品销售者正在实施全方位营销，通常包括以下四种营销活动</p>
+<ul>
+<li><p><strong>内部营销</strong> -&gt;确保组织中所有成员都遵循相应的营销原则，特别是公司的高层管理人员</p>
+<p>假设框架 ：满意的员工产生满意的客户，要想赢得客户满意，首先要让员工满意；只有满意的员工才可能以更高的效率和效益为外部客户提供更加优质的服务，并最终使外部客户感到满意</p>
+</li>
+<li><strong>整合营销</strong>-&gt;确保公司运用各种手段或方式来创造、交付和传播价值，并且是以最佳的方式组合起来加以运用的</li>
+<li><strong>关系营销</strong>-&gt;与顾客、渠道成员和其他营销伙伴建立恰当的多重关系</li>
+<li><p><strong>绩效营销</strong>-&gt;测量并管理营销活动和营销项目的投资回报率，并综合考虑其影响，特别是法律、伦理、社会和环境影响</p>
+<p>本书贯穿以上四种营销活动</p>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li>本书有什么优点<ul>
+<li>管理导向 -&gt;本书重点强调营销管理人员和高层管理人员在围绕市场需求和机会时努力协调组织目标、能力和市场资源面临的主要诀策</li>
+<li>分析方法 -&gt;提供分析常规问题的概念工具和框架，并通过案例阐述重要的营销原理、营销战略和营销实践</li>
+<li>多科学视角-&gt;整合了不同领域的研究成果--经济学、行为科学、管理理论和数学，其中的概念和工具可以直接运用到市场营销实践中去</li>
+<li>普遍适用性-&gt;运用战略思维，有形产品，无形服务等营销对象进行了详细阐述，涵盖了各种组织--盈利、非盈利、国内外大小公司等</li>
+<li>综合性和全面性-&gt;本书涵盖了富有经验的营销管理人员在实施战略营销、策略营销和营销管理中需要了解的所有主题</li>
+</ul>
+</li>
+</ol>
+<h1 id="-">第一篇 理解营销管理</h1>
+<h2 id="-21-">一、21世纪的市场营销</h2>
+<ol>
+<li>营销的重要性<ul>
+<li>营销无处不在</li>
+</ul>
+</li>
+<li><p>市场营销的范畴</p>
+<ul>
+<li><strong>市场营销</strong> -&gt;识别并满足人类和社会的需要，简洁说：“满足别人并获得利润”</li>
+<li><strong>营销管理</strong>-&gt;艺术和科学的结合，通过创造、交付和传播优质的顾客价值来获得、挽留和提升顾客的科学和艺术（推销管理的艺术）</li>
+<li>营销对象-&gt;产品、人物、事件、体验、服务、场所、产权、组织、信息、想法</li>
+<li><strong>营销者</strong> -&gt;从<strong>潜在客户</strong>中寻求响应的人，要刺激消费者对产品的需求</li>
+<li><p>潜在需求类型-&gt;对产品需求可能是下面八种之一</p>
+<ol>
+<li>负需求</li>
+<li>无需求</li>
+<li>潜在需求</li>
+<li>下降需求</li>
+<li>不规则需求</li>
+<li>充分需求</li>
+<li>过度需求</li>
+<li>不健康需求</li>
+</ol>
+<p>营销者必须确定没中潜在需求的基本原因，然后制定促使改种需求类型向自己所洗完的需求类型类型发生转变的行动方案</p>
+</li>
+<li><p>市场 -&gt;</p>
+<ul>
+<li>传统概念--买卖双方在一起交易的场所</li>
+<li><p>经济学概念--对某一特定产品和某一类产品买与卖双方的集合（房产市场和粮食市场）</p>
+<p><strong>市场流程结构图</strong></p>
+<p><img src="C:\Users\fsk\Desktop\marketing\yingxiaoguanli\img\1-1.jpg" alt=""></p>
+<p><strong>简单的营销系统</strong></p>
+<p><img src="C:\Users\fsk\Desktop\marketing\yingxiaoguanli\img\1-2.jpg" alt=""></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>营销的核心概念</p>
+<ul>
+<li><p>需要、欲望和需求
+  <strong><em>需要</em></strong> 是人类最基本的要求，如：空气、水、衣服和场所。人类同样有创新、接受教育和娱乐的需要；当存在具体商品满足需要时，需要就变成了<strong><em>欲望</em></strong>。欲望往往受社会所制约；
+  <strong><em>需求</em></strong>是有支付能力购买具体的商品来满足的欲望，很多人想买保时捷，只有部分人买得起，保时捷公司就要测算有多少人能买得起</p>
+<p>  营销者不创造需要，需要先于营销者存在，营销者却对人的额需要和欲望产生影响，下面提供五种模型分析消费者的需要和欲望</p>
+<ol>
+<li>明确表述的需要（顾客想要一辆不是很贵的车）</li>
+<li>真正需要（顾客想要成本很低，不只是价格低）</li>
+<li>未明确表述的需要（从销售者哪里购买到更优质的服务）</li>
+<li>令人愉悦的需要（获赠导航系统）</li>
+<li>秘密需要（顾客希望朋友把自己当内行）</li>
+</ol>
+</li>
+<li><p>目标市场、市场定位和市场细分</p>
+<p>   沃尔沃-&gt;顾客所购买的最安全的汽车</p>
+</li>
+<li><p>供应物和品牌
+  品牌是具有明确来源的供应物的一种标志</p>
+</li>
+<li><p>价值与满意</p>
+<ul>
+<li>价值 = 价格  -&gt;满意</li>
+<li>价值 &gt; 价格  -&gt;高兴</li>
+<li>价值 &lt; 价格  -&gt;不满意</li>
+</ul>
+</li>
+<li>营销渠道<ul>
+<li>传播渠道</li>
+<li>分销渠道</li>
+<li>服务渠道</li>
+</ul>
+</li>
+<li>供应链 -&gt; 原材料到顾客的渠道链</li>
+<li>竞争</li>
+<li>市场营销环境</li>
+</ul>
+</li>
+<li><p>新的营销现实</p>
+<ul>
+<li>主要的社会因素：新的社会因素使市场也有了翻天覆地的变化，具体来说主要包括12个因素<ol>
+<li>网络信息技术</li>
+<li>全球化</li>
+<li>放松管制</li>
+<li>私有化</li>
+<li>激烈的竞争</li>
+<li>产业交融</li>
+<li>零售转型</li>
+<li>脱媒 -&gt;美国在线，亚马逊，雅虎等网络公司改变传统的分销渠道中货物的流动，尝试直接交付产品和服务并获得了惊人的成功</li>
+<li>消费者的购买力</li>
+<li>消费者信息</li>
+<li>消费者参与</li>
+<li>消费者抵制-&gt;品牌忠诚度降低，对营销方式和价格价值更加关心，特别是营销方式的抵制达到前所未有的高度</li>
+</ol>
+</li>
+<li>企业新能力<ol>
+<li>营销者可以把互联网做为扩大其势力范围的信息渠道和销售渠道</li>
+<li>营销者可以收集到有关市场、消费者、潜在顾客和竞争者的更全面更丰富的信息</li>
+<li>营销者通过社交媒体发布和推广某品牌信息</li>
+<li>企业内沟通，培训招聘，调研，提高效率</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>全方位营销观念</p>
+<p> <strong>全方位营销</strong>观念是以开发    、设计和实施营销计划、过程及活动的相互依赖性，每个细节都重要，下面是全方位营销的简图和4个主题</p>
+<p> <img src="C:\Users\fsk\Desktop\marketing\yingxiaoguanli\img\1-3.jpg" alt=""></p>
+<p> <strong>营销谬误和戒律</strong></p>
+<p> <img src="C:\Users\fsk\Desktop\marketing\yingxiaoguanli\img\1-4.jpg" alt=""></p>
+</li>
+<li><p>对4P进行更新</p>
+<ul>
+<li><p>麦卡锡把不同的营销活动概括成四大营销组合工具，即营销4P：产品（product）、价格(price)、地点(place)和促销(promotion)，如图所示</p>
+<p><img src="C:\Users\fsk\Desktop\marketing\yingxiaoguanli\img\1-5.jpg" alt=""></p>
+</li>
+<li><p>根据现代营销的广度、复杂性和丰富性，上述4P无法准确反映营销活动，还需要下面一组反映现代营销现实并具有代表性的营销概念：人员(people)、流程(process)、项目(project)、绩效(performance)，如图所示</p>
+<p>  <img src="C:\Users\fsk\Desktop\marketing\yingxiaoguanli\img\1-6.jpg" alt=""></p>
+</li>
+</ul>
+</li>
+<li><p>营销管理的任务</p>
+<ul>
+<li>制定营销战略和计划</li>
+<li>获取营销洞察</li>
+<li>与顾客建立联系</li>
+<li>塑造强势品牌</li>
+<li>设计市场供应物</li>
+<li>交付价值</li>
+<li>传播价值</li>
+</ul>
+</li>
+</ol>
+<h2 id="-">二、制定营销战略和营销计划</h2>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>营销管理过程中，关键因素就是能够指导营销活动的、具有远见卓识的、富有创造性的营销战略和营销计划</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>一方面企业要坚持一种有效的战略，另一方面企业也要不断用新方法改进自己战略</span></span></span></div><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>营销战略也越来越依赖于“为企业的一系列产品和服务制定相应的战略”</span></span></span></div></pre><h3 id="-">公司和部门的战略计划</h3>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="syntax--meta syntax--paragraph syntax--text"><span>所有公司为每个业务单位制定目标，并参与制定具体的业务单位战略</span></span></span></div></pre><ol>
+<li><p>确立公司使命
+ 参照<strong>彼得·德鲁克</strong>的经典问题：我们的企业是干什么的？顾客是谁？我们对顾客的价值是什么？我们的业务将是什么？听起来简单，却是最大难题。</p>
+<p> 亚马逊从全球最大的网上书店调整为网上商店，成功的调整自己的使命</p>
+<p> 当公司的使命能够反映公司愿景--一个几乎不可能实现的梦想（一个10~20年公司发展方向）时，就达到了使命的最高境界</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>eg：索尼公司前总裁盛田昭夫希望每个人都可以携带供个人可使用的可移动音响，结果他的公司就发明了随身听和cd随身听</span></span></span></div></pre><p> 好的使命陈述往往有以下五个特点</p>
+<p> <img src="C:\Users\fsk\Desktop\marketing\yingxiaoguanli\img\2-1.jpg" alt=""></p>
+</li>
+<li><p>建立战略业务单位</p>
+<ul>
+<li><p>公司根据业务领域的界定建立战略业务单位，从三个方面界定一个业务领域：
+  顾客群、顾客需要和技术</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span>&nbsp;&nbsp;</span><span class="syntax--meta syntax--paragraph syntax--text"><span>eg：一家专门为电视摄影棚设计白炽照明系统的小微型企业，顾客群是摄影棚，顾客需要就是照明，技术就是白炽照明</span></span></span></div></pre><p>大公司有往往同时经营不同的业务，战略业务单位有以下特点：</p>
+<ul>
+<li>独立的业务或相关业务集合体，能和公司其他业务分離開单独编制</li>
+<li>有自己的竞争对手</li>
+<li>有专门的经理人员负责战略计划、企业利润
+确定公司的战略业务单位的目的，就是要制定独立的战略，并配置适当的资源。公司既有”“昨日的辉煌”也有&#39;明日之星&#39;，做好资源配置是很必要的</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>给每个战略业务单位配置资源</li>
+<li>评估成长机会<ul>
+<li>密集型成长机会-&gt;公司现有业务领域寻找未来的发展机会</li>
+<li>一体化成长机会-&gt;建立或收购与目前业务相当的业务</li>
+<li>多样化成长机会-&gt;增加公司目前业务无关，富有吸引力的业务</li>
+</ul>
+</li>
+</ol>
+<p><img src="C:\Users\fsk\Desktop\marketing\yingxiaoguanli\img\2-2.jpg" alt=""></p>
+<h3 id="-">业务部门的战略计划</h3>
+<p><img src="C:\Users\fsk\Desktop\marketing\yingxiaoguanli\img\2-3.1.jpg" alt=""></p>
+<p>机会矩阵</p>
+<p><img src="C:\Users\fsk\Desktop\marketing\yingxiaoguanli\img\2-4.jpg" alt=""></p>
+<h1 id="-">第二篇 获取营销洞察</h1>
+<h2 id="-">一、收集信息和预测需求</h2>
+<ol>
+<li><p>现代营销信息系统的构成</p>
+<p> 每个企业都应当构建连续的信息流 ，并将信息分发给营销经理。<strong>营销信息系统</strong>由收集、分类、分析、评估和向决策者分发及时精确所需信息的人员、设备和程序构成。
+ 系统由企业<strong>内部报告</strong>、<strong>营销情报</strong>活动和营销调研来运行</p>
+</li>
+<li><p>内部报告</p>
+<p> 营销经理通过有关订单、销售、价格、成本、库存水平、应收账款、应付账款等内部报告来获取信息，发现重要的市场机会，识别潜在的管理问题</p>
+<p> 订单收款系统、销售信息系统、数据库、数据仓库和数据挖掘</p>
+</li>
+<li><p>营销情报
+ 营销情报系统：训练鼓励销售人员，激励分销商、零售商 ，雇佣外部专家，网络，顾问小组的形式获取营销情报</p>
+</li>
+<li><p>分析宏观环境</p>
+<ul>
+<li><p>认识到需要和趋势：区别时尚、趋势、大趋势</p>
+<p>时尚：不可预测，短期，没有社会经济政治意义的</p>
+<p>趋势：比时尚更有预见性，更持久，具有势头和持久性。比如三鹿奶粉的倒下</p>
+<p>大趋势：社会、政治、经济和技术的大变化，其形成很慢 ，一旦形成将影响7~10年甚至更长事件</p>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>预测和需求测量</p>
+<ul>
+<li><p>市场需求的预测</p>
+<p>公司可以根据6种产品层次，5种不同空间层次和3个不同时间层次来实行90种不同类型的需求估算
+几种不同方法将根据市场区分不同类型</p>
+<p><strong>潜在市场</strong>-&gt;对商品有某种程度兴趣的。要求有足够的收入并能接近这类产品</p>
+<p><strong>有效市场</strong>-&gt;有兴趣，有足够收入，能接触的人群</p>
+<p><strong>目标市场</strong>-&gt;有效市场中，公司决定经营的市场</p>
+<p><strong>渗透市场</strong>-&gt;购买公司产品的消费者群体</p>
+<p><img src="C:\Users\fsk\Desktop\marketing\yingxiaoguanli\img\3-2.jpg" alt=""></p>
+</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>  微软</p>
+</blockquote>
+<h2 id="-">二、营销调研和需求测量</h2>
+<ol>
+<li><p>营销调研系统
+ 通过营销调研，营销经理才能深入理解顾客态度和购买行为。<strong>营销洞察</strong>能够针对为什么要评价和如何评价市场中的营销效果，所观察的结果对于营销者有何种意义等提供诊断信息</p>
+<ul>
+<li>专门的营销调研部门，</li>
+<li>雇佣专门的营销调研公司实施营销调研</li>
+<li>其他方式<ul>
+<li>委托学生或者教授进行设计和实施。通用电气和希尔顿酒店等一些公司都热衷于众传播进行调研。如：对一主题举行创新大赛或者活动请学生参加，并向参与者提供赞助</li>
+<li>利用互联网。浏览竞争对手的网站监测社交群的聊天信息等获取有用情报</li>
+<li>观察竞争对手。小公司，如饭店、旅馆可以直接观察定期访问等方式了解对手的经营情况</li>
+<li>专业合作伙伴。合作伙伴间共享相关市场知识</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>营销调研的程序</p>
+<p> 有效的营销调研应当包括六个步骤</p>
+<p> <img src="C:\Users\fsk\Desktop\marketing\yingxiaoguanli\img\4-1.jpg" alt=""></p>
+<p> eg</p>
+<p> <img src="C:\Users\fsk\Desktop\marketing\yingxiaoguanli\img\4-1.1.jpg" alt=""></p>
+<p> 营销问题的界定不能空泛，‘如找出头等舱乘客的所有需要’，调研人员就会无所适从，
+ 如果说&#39;次航班中是否有足够的乘客愿意支付25美金使用网络服务，这个收费标准能否使公司提前一年达到收支平衡？&#39;，这样又过于具体</p>
+<p> 调研内容：</p>
+<ol>
+<li>哪一类型的头等舱乘客可能使用飞机上网络服务</li>
+<li>每一档价格分别有多少乘客愿意用</li>
+<li>有多少人因为这样服务选择本航空公司</li>
+<li>为企业形象带来多久的长期声誉</li>
+<li>相对于其他项目（增加插头、其它娱乐设施）对乘客的重要性更大
+调研计划：
+观察法、焦点小组访谈法、调查法、行为资料分析法和实验法</li>
+</ol>
+</li>
+<li><p>测定营销的生产率
+ 营销投入可能是短期的，产出的品牌知名度、品牌形象和品牌忠诚度和潜在客户的提升却要几个月时间才能体现，很难分离出某次营销活动的成效</p>
+<ul>
+<li><p><strong>营销绩效指标</strong> -&gt;是一组能帮助营销人员将企业的营销绩效进行量化、比较和解释的一组测量指标
+  营销绩效的评价分两部分：短期效果和品牌资产变化</p>
+<p><strong>营销指标举例</strong></p>
+<p><img src="C:\Users\fsk\Desktop\marketing\yingxiaoguanli\img\4-2.jpg" alt=""></p>
+</li>
+<li><p>营销组合建模
+  营销人员根据销售数据使用多变量分析，回归分析去整理每一项营销因素如何影响营销结果</p>
+<p>  能分解营销结果，不能评价营销元素在组合模型中的作用，沃顿商学院的<em>*</em>大卫.雷博斯坦提出三个缺点</p>
+<ol>
+<li>只关注增长却不关注基础销售和长期效果</li>
+<li>将顾客满意、顾客认识和品牌资产融入有局限性</li>
+<li>很难与竞争对手的指标相统一</li>
+</ol>
+</li>
+<li><p>营销监视板</p>
+<ol>
+<li><p>顾客绩效积分卡</p>
+<p><img src="C:\Users\fsk\Desktop\marketing\yingxiaoguanli\img\4-3.jpg" alt=""></p>
+</li>
+<li><p>利益相关绩效积分卡
+员工、供应商、银行、分销商、零售商和股东满意度。根据这指标相对调整营销方案</p>
+<p>营销咨询专家<strong>帕特.拉普安特</strong>认为营销监视板能够提供企业运营所需要的所有最新最及时的必要信息,他认为当今营销者主要使用四条测定‘路径’</p>
+<p><img src="C:\Users\fsk\Desktop\marketing\yingxiaoguanli\img\4-4.jpg" alt=""></p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<p>·
+·
+··
+·
+·</p>
+<p>·
+·</p>
+<p>·</p>
+<p>·
+·</p>
+<p>·
+·</p>
+<p>·
+·
+·</p>
+<p>·
+·
+·</p>
+<p>·
+·
+·</p>
+<p>·</p>
+<h1 id="-">本次分享结束，谢谢大家！</h1>
+<p>·
+·</p>
+<p>·
+·</p>
+<p>·
+·</p>
+<p>·
+·</p>
+<p>·
+·</p>
+<p>·
+·</p>
+<p>·
+·</p>
+<p>·</p></body>
+</html>
