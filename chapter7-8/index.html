@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>yingxiaoguanli</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(197, 200, 198); background-color: rgb(29, 31, 33); overflow: auto; }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(155, 160, 157); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: white; }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(155, 160, 157); border-color: rgb(67, 72, 76); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top: 2px dashed rgb(67, 72, 76); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(67, 72, 76); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(48, 51, 55); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(39, 41, 44); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(67, 72, 76) rgb(67, 72, 76) rgb(53, 57, 60); border-image: initial; background-color: rgb(48, 51, 55); }
+.markdown-preview[data-use-github-style] { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); overflow: scroll; }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left: 4px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { background-color: rgb(255, 255, 255); border-top: 1px solid rgb(204, 204, 204); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; background-color: rgba(0, 0, 0, 0.0392157); border-radius: 3px; }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; background: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border-radius: 3px; }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; background-color: rgb(252, 252, 252); border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-image: initial; border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .horizontal-scrollbar { visibility: visible; }
+.markdown-preview .task-list-item-checkbox { position: absolute; margin: 0.25em 0px 0px -1.4em; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+.spell-check-corrections {
+  width: 25em !important;
+}
+
+pre.editor-colors {
+  background-color: #1d1f21;
+  color: #c5c8c6;
+}
+pre.editor-colors .invisible-character {
+  color: rgba(197, 200, 198, 0.2);
+}
+pre.editor-colors .indent-guide {
+  color: rgba(197, 200, 198, 0.2);
+}
+pre.editor-colors .wrap-guide {
+  background-color: rgba(197, 200, 198, 0.1);
+}
+pre.editor-colors .gutter {
+  background-color: #292c2f;
+}
+pre.editor-colors .gutter .cursor-line {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+pre.editor-colors .line-number.cursor-line-no-selection {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+pre.editor-colors .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+pre.editor-colors .fold-marker:after {
+  color: #fba0e3;
+}
+pre.editor-colors .invisible {
+  color: #c5c8c6;
+}
+pre.editor-colors .cursor {
+  border-color: white;
+}
+pre.editor-colors .selection .region {
+  background-color: #444;
+}
+pre.editor-colors .bracket-matcher .region {
+  border-bottom: 1px solid #f8de7e;
+  margin-top: -1px;
+  opacity: .7;
+}
+pre.editor-colors .syntax--source.syntax--gfm {
+  color: #999;
+}
+pre.editor-colors .syntax--gfm .syntax--markup.syntax--heading {
+  color: #eee;
+}
+pre.editor-colors .syntax--gfm .syntax--link {
+  color: #555;
+}
+pre.editor-colors .syntax--gfm .syntax--variable.syntax--list,
+pre.editor-colors .syntax--gfm .syntax--support.syntax--quote {
+  color: #555;
+}
+pre.editor-colors .syntax--gfm .syntax--link .syntax--entity {
+  color: #ddd;
+}
+pre.editor-colors .syntax--gfm .syntax--raw {
+  color: #aaa;
+}
+pre.editor-colors .syntax--markdown .syntax--paragraph {
+  color: #999;
+}
+pre.editor-colors .syntax--markdown .syntax--heading {
+  color: #eee;
+}
+pre.editor-colors .syntax--markdown .syntax--raw {
+  color: #aaa;
+}
+pre.editor-colors .syntax--markdown .syntax--link {
+  color: #555;
+}
+pre.editor-colors .syntax--markdown .syntax--link .syntax--string {
+  color: #555;
+}
+pre.editor-colors .syntax--markdown .syntax--link .syntax--string.syntax--title {
+  color: #ddd;
+}
+.syntax--comment {
+  color: #7C7C7C;
+}
+.syntax--entity {
+  color: #FFD2A7;
+}
+.syntax--entity.syntax--name.syntax--type {
+  text-decoration: underline;
+  color: #FFFFB6;
+}
+.syntax--entity.syntax--other.syntax--inherited-class {
+  color: #9B5C2E;
+}
+.syntax--keyword {
+  color: #96CBFE;
+}
+.syntax--keyword.syntax--control {
+  color: #96CBFE;
+}
+.syntax--keyword.syntax--operator {
+  color: #EDEDED;
+}
+.syntax--storage {
+  color: #CFCB90;
+}
+.syntax--storage.syntax--modifier {
+  color: #96CBFE;
+}
+.syntax--constant {
+  color: #99CC99;
+}
+.syntax--constant.syntax--numeric {
+  color: #FF73FD;
+}
+.syntax--variable {
+  color: #C6C5FE;
+}
+.syntax--invalid.syntax--deprecated {
+  text-decoration: underline;
+  color: #FD5FF1;
+}
+.syntax--invalid.syntax--illegal {
+  color: #FD5FF1;
+  background-color: rgba(86, 45, 86, 0.75);
+}
+.syntax--string .syntax--source,
+.syntax--string .syntax--meta.syntax--embedded.syntax--line {
+  color: #EDEDED;
+}
+.syntax--string .syntax--punctuation.syntax--section.syntax--embedded {
+  color: #00A0A0;
+}
+.syntax--string .syntax--punctuation.syntax--section.syntax--embedded .syntax--source {
+  color: #00A0A0;
+}
+.syntax--string {
+  color: #A8FF60;
+}
+.syntax--string .syntax--constant {
+  color: #00A0A0;
+}
+.syntax--string.syntax--regexp {
+  color: #E9C062;
+}
+.syntax--string.syntax--regexp .syntax--constant.syntax--character.syntax--escape,
+.syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded,
+.syntax--string.syntax--regexp .syntax--string.syntax--regexp.syntax--arbitrary-repetition {
+  color: #FF8000;
+}
+.syntax--string.syntax--regexp.syntax--group {
+  color: #C6A24F;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+.syntax--string.syntax--regexp.syntax--character-class {
+  color: #B18A3D;
+}
+.syntax--string .syntax--variable {
+  color: #8A9A95;
+}
+.syntax--support {
+  color: #FFFFB6;
+}
+.syntax--support.syntax--function {
+  color: #DAD085;
+}
+.syntax--support.syntax--constant {
+  color: #FFD2A7;
+}
+.syntax--support.syntax--type.syntax--property-name.syntax--css {
+  color: #EDEDED;
+}
+.syntax--source .syntax--entity.syntax--name.syntax--tag,
+.syntax--source .syntax--punctuation.syntax--tag {
+  color: #96CBFE;
+}
+.syntax--source .syntax--entity.syntax--other.syntax--attribute-name {
+  color: #C6C5FE;
+}
+.syntax--entity.syntax--other.syntax--attribute-name {
+  color: #C6C5FE;
+}
+.syntax--entity.syntax--name.syntax--tag.syntax--namespace,
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--namespace {
+  color: #E18964;
+}
+.syntax--meta.syntax--preprocessor.syntax--c {
+  color: #8996A8;
+}
+.syntax--meta.syntax--preprocessor.syntax--c .syntax--keyword {
+  color: #AFC4DB;
+}
+.syntax--meta.syntax--cast {
+  color: #676767;
+}
+.syntax--meta.syntax--sgml.syntax--html .syntax--meta.syntax--doctype,
+.syntax--meta.syntax--sgml.syntax--html .syntax--meta.syntax--doctype .syntax--entity,
+.syntax--meta.syntax--sgml.syntax--html .syntax--meta.syntax--doctype .syntax--string,
+.syntax--meta.syntax--xml-processing,
+.syntax--meta.syntax--xml-processing .syntax--entity,
+.syntax--meta.syntax--xml-processing .syntax--string {
+  color: #494949;
+}
+.syntax--meta.syntax--tag .syntax--entity,
+.syntax--meta.syntax--tag > .syntax--punctuation,
+.syntax--meta.syntax--tag.syntax--inline .syntax--entity {
+  color: #C6C5FE;
+}
+.syntax--meta.syntax--tag .syntax--name,
+.syntax--meta.syntax--tag.syntax--inline .syntax--name,
+.syntax--meta.syntax--tag > .syntax--punctuation {
+  color: #96CBFE;
+}
+.syntax--meta.syntax--selector.syntax--css .syntax--entity.syntax--name.syntax--tag {
+  text-decoration: underline;
+  color: #96CBFE;
+}
+.syntax--meta.syntax--selector.syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--tag.syntax--pseudo-class {
+  color: #8F9D6A;
+}
+.syntax--meta.syntax--selector.syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+  color: #8B98AB;
+}
+.syntax--meta.syntax--selector.syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--class {
+  color: #62B1FE;
+}
+.syntax--meta.syntax--property-group .syntax--support.syntax--constant.syntax--property-value.syntax--css,
+.syntax--meta.syntax--property-value .syntax--support.syntax--constant.syntax--property-value.syntax--css {
+  color: #F9EE98;
+}
+.syntax--meta.syntax--preprocessor.syntax--at-rule .syntax--keyword.syntax--control.syntax--at-rule {
+  color: #8693A5;
+}
+.syntax--meta.syntax--property-value .syntax--support.syntax--constant.syntax--named-color.syntax--css,
+.syntax--meta.syntax--property-value .syntax--constant {
+  color: #87C38A;
+}
+.syntax--meta.syntax--constructor.syntax--argument.syntax--css {
+  color: #8F9D6A;
+}
+.syntax--meta.syntax--diff,
+.syntax--meta.syntax--diff.syntax--header {
+  color: #F8F8F8;
+  background-color: #0E2231;
+}
+.syntax--meta.syntax--separator {
+  color: #60A633;
+  background-color: #242424;
+}
+.syntax--meta.syntax--line.syntax--entry.syntax--logfile,
+.syntax--meta.syntax--line.syntax--exit.syntax--logfile {
+  background-color: rgba(238, 238, 238, 0.16);
+}
+.syntax--meta.syntax--line.syntax--error.syntax--logfile {
+  background-color: #751012;
+}
+</style>
+  </head>
+  <body class='markdown-preview' data-use-github-style><h1 id="-">营销管理第三篇</h1>
+<h2 id="-">第七章　分析组织市场</h2>
+<ol>
+<li>什么是组织购买</li>
+<li>组织购买过程中的参与者</li>
+<li>采购流程</li>
+<li>组织购买过程的阶段</li>
+<li>管理组织间客户的关系</li>
+<li>机构与政府市场</li>
+</ol>
+<h2 id="-">第八章  识别细分市场和目标</h2>
+<ol>
+<li>细分消费者市场的基础</li>
+<li>细分组织市场的基础</li>
+<li>目标市场选择</li>
+</ol>
+<h1 id="-">第七章 分析组织市场</h1>
+<h2 id="-">什么是组织购买</h2>
+<p>企业组织并不只是销售，还有购买。销售者要了解这些组织的需求、资源、政策和购买程序。</p>
+<ul>
+<li><strong><em>组织市场</em></strong> ----&gt;包括所有购买产品和服务用以生产、出售、出租或提供给其他组织为目的的产品和服务的组织。</li>
+</ul>
+<p>组织市场的销售行为笔消费者市场涉及更多的项目和资金</p>
+<p>组织市场拥有消费者市场相同的挑战。一项对B2B公司的调查显示，他们面临着如下挑战</p>
+<ol>
+<li>以新的方式深刻理解消费者的需求</li>
+<li>识别组织发展的新机遇</li>
+<li>改善价值管理技术和工具</li>
+<li>更好地衡量营销成果和责任指标</li>
+<li>在全球市场中竞争和发展，特别是在中国市场</li>
+<li>通过更快地将创新产品投入市场，并转向更有竞争力的商业模式来对抗产品和服务商品化的威胁</li>
+<li>说服高级决策人员接受营销理念并支持强健的营销项目</li>
+</ol>
+<p>*　采购类型</p>
+<ol>
+<li><p>直接重购： 采购部门根据管理重构产品。通过提供新产品或者争取到小额订单逐渐扩大采购份额</p>
+</li>
+<li><p>调整性重购： 购买者希望修改产品的规格、价格、交货要求或其他条件。采购名单里的供应商会感到不安，
+名单外的供应商很难过会看到商机</p>
+</li>
+<li><p>新采购任务： 采购者首次购买某一服务或产品。成本或风险越大，决策参与者就越多，信息收集也越多</p>
+</li>
+</ol>
+<h2 id="-">组织购买过程中的参与者</h2>
+<h3 id="-">采购中心</h3>
+<ol>
+<li>发起者： 请求购买物品的人，包括使用者和其他人</li>
+<li>使用者： 使用产品和服务的人。通常，使用者首先提出购买建议，并协助确定对产品的要求</li>
+<li>影响着： 影响购买决策的人，技术人员、其他评价者</li>
+<li>决定者： 决定产品要求和供应商的人</li>
+<li>批准者： 批准行动方案的人</li>
+<li>购买者： 实施采购行为的人</li>
+<li>守门人： 有权力阻止销售人员或信息接近采购中心成员的人。</li>
+</ol>
+<h3 id="-">企业定位与采购中心</h3>
+<ul>
+<li>企业定位 组织营销者有多种方法对市场，从而确定他们开展销售的公司类型
+一旦确定营销活动关注的企业类型，公司必须决定如何能以最好的方式向销售产品或服务。</li>
+</ul>
+<p><img src="./img/1.png" alt=""></p>
+<p>尽管组织营销者能获取到任何关于个性和人际因素都有用，但是而他们不可能确切知道那种群体动力在购买过程中发挥了作用。
+小型销售更关注核心的购买印象概念股者，较大规模的销售商则深入地、多层次地接触尽可能多的参与者。
+组织营销者必须定期检查有关采购中心参与者的假想</p>
+<h2 id="-">采购流程</h2>
+<p>阻止购买者会寻求市场产品成本有关的最高受益方案。阻止购买者的购买动机成为抑制成本和一直收益差异间差异的一个函数。
+营销者的任务就是推出一个可盈利的产品，并向目标卖家提供卓越的客户价值。</p>
+<h1 id="-">组织购买过程的阶段</h1>
+<p>我们将描述阻止购买决策过程的各个阶段，帕特克里·J·罗宾森及其同事在购买放歌框架中指出的，组织购买要经过八个购买阶段</p>
+<p><img src="./img/2.png" alt=""></p>
+<ol>
+<li><p>问题识别：
+采购开始：内部刺激--公司需要通过某一产品或服务得到满足，外部刺激引起的</p>
+</li>
+<li><p>总需求说明和产品规格的确定
+确定总体特征和需要的数量。标准物品，涉及范围小；复杂物品，涉及范围大。
+采购者与其他人员（工程师、用户等）共同决定所需特征--可靠性、耐用性、价格等。组织营销者可以通过说明其产品如何能满足
+甚至是禅悦这些需求来协助购买者</p>
+</li>
+<li>寻找供应商
+<em>　目录网站：电子目录，电子采购软件---顾安捷公司的Grainger
+</em>　垂直市场：专门的电子商务中心
+*　纯拍卖网站：利氏兄弟拍卖行</li>
+<li>专用交换: 专用交换市场，与特别邀请的供应商和合作伙伴紧密连接</li>
+<li>易贸市场：</li>
+<li>团购</li>
+<li>供应商的选择
+在选择供应商之前，购买中心将规定所希望的供应商的品质，并对他们进行排名，下面是一个通用的供应商评估模型</li>
+</ol>
+<p><img src="./img/3.png" alt=""></p>
+<ol>
+<li>绩效评估
+购买者通常通过三种方法定期审核选定的供应商绩效</li>
+<li>接触最终用户并请求他们做出评价；</li>
+<li>采用加权打分的方法用几个标准对供应商进行评分；
+*　或者对绩效差的供应商成品进行汇总，得出经过调整的包括价格在内的采购成本
+绩效评估可以引导购买者继续、调整或终止与供应商的关系</li>
+</ol>
+<h2 id="-">管理组织间客户的关系</h2>
+<p>许多因素会对组织间关系的发展造成影响。四个相关因素是：替代品的有效性、供给的重要性、供给的复杂性和供应市场的活力。
+在此基础上，我们可以将‘购买者--供应商’关系分为八种类型</p>
+<ol>
+<li>基本买卖型： 简单、例行的交换--属于中等水平的合作和信息交流</li>
+<li>梗概型：这类交易需要买家进行更多的调整--合作和信息交流较少</li>
+<li>合约交易型：有合约规范，信任、合作和互动的水平低</li>
+<li>客户关系型： 竞争大于合作</li>
+<li>合作体系型： 伙伴在业务上紧密合作，但是双方都不通过法律手段或自我调整来表明结构性承诺</li>
+<li>协作型: 在协作交流中，更多的信任和承诺能产生真正的伙伴关系</li>
+<li>相互适应型：双方都作出很多明确的关系调整，但不是一定能达成强烈的信任或合作</li>
+<li>顾客至上型： 这种密切的协作关系，忙方为了满足客户需求进行调整，但并不期待交流方式发生调整或改变</li>
+</ol>
+<p>这些关系角色会在不同情况被激活。当需求可以有基本的供应商满足，买家不希望也不需要和供应商建立密切的关系，同时，
+供应商可能发现投资发展潜力有限的消费者是不值得的</p>
+<ul>
+<li>一项研究表明：当供给对客户非常重要髌骨存在采购障碍时，客户与供应商之间的关系最为密切</li>
+<li>另一项研究表明： 只有存在环境的高度不确定性，并且有适度的专用投资时，双方通过信息交流和规划建立的垂直协调才具有必要性</li>
+</ul>
+<h2 id="-">机构和政府市场</h2>
+<ol>
+<li>组织机构市场：学校、医院、疗养院、监狱以及其他想自己关注的人提供货物和服务的单位组成。购买的目的不是为了盈利，
+如果医院采购的食品引起病人的抱怨，会影响医院名誉，就会寻找组织机构的食品供应商，质量超过最低质量标准。
+许多食品销售者成立专门的部门相应机构购买者的特殊需求</li>
+<li>政府机构的购买不仅数额巨大，次数也大。但是需要接受公开审核，会要求供应商提供大量的文件。供应商常常对官僚作风、
+法规、决策延迟以及采购的人事变动产生抱怨</li>
+</ol>
+<h1 id="-">第八章  识别细分市场和目标</h1>
+<p>公司不可能在大型、广泛或多样的市场中于所有顾客建立联系。</p>
+<ul>
+<li>他们可以将这样的市场划分为具有不同需要和需求的消费者群体或细分市场。</li>
+<li>确定哪些细分市场是它可以有效服务的</li>
+</ul>
+<p>为了了解每一个细分市场与众不同，要正确识别和满足细分市场是营销成功的关键</p>
+<h2 id="-">细分消费者市场的基础</h2>
+<p>市场细分将一个市场划分为界限清楚的几部分，一个细分市场由一组具有相似需要和需求的消费者组成。
+营销者的任务在于识别细分市场的适当数量和性质，并决定以哪一个市场为目标</p>
+<p>用两组变量细分消费者市场</p>
+<p>-- 一些人通过地理、人口统计特征和心理统计特征来确定细分市场，然后检验消费者细分市场是否呈现出不同的需要或产品反馈</p>
+<p>-- 一些人尝试通过行为因素来确定细分市场</p>
+<p>无论哪一种关键在于使营销计划能根据识别的消费者差异进行调整</p>
+<p><img src="./img/4-1.jpg" alt=""></p>
+<p><img src="./img/4-2.jpg" alt=""></p>
+<ul>
+<li>地理细分</li>
+</ul>
+<p>将市场划分为地理单元，公司在不同的区域经营，但是必须关注局部的差异，公司可以使其营销计划更接近个体消费者并与之建立私人联系
+    Curves ,一个针对中年妇女的连锁运动中心，将它的纸袋放在冰淇淋店，披萨店等可以使消费者产生内疚的本地商业场所</p>
+<ul>
+<li><p>人口统计细分</p>
+</li>
+<li><p>年龄和生命周期 ： 佳洁士和高露洁 针对儿童、成年和老人三个产品线</p>
+</li>
+<li>生活阶段： 结婚、离婚、赡养老人、同居、购房等阶段性需求</li>
+<li>性别： 男女对消费有着不同的态度和行为</li>
+<li>收入： 汽车、服装、化妆品、金融产品和旅游这些行业长期进行收入细分</li>
+</ul>
+<p><img src="./img/5.jpg" alt=""></p>
+<ul>
+<li>心理统计细分
+VALS(价值观与生活方式模型)，</li>
+<li>四种拥有较高资源水平的群体是：</li>
+<li><p>创新者：拥有高自尊、成功、富有经验、积极、具有领导才能的人。所购物品通常反映出对较高级、有利于导向的产品和服务的偏好</p>
+</li>
+<li><p>思考着：受思想驱动、成熟、满足、深思熟虑的人，重视秩序、知识和责任。他们寻求产品的持久性。功能性和价值</p>
+</li>
+<li><p>成就者： 关注事业和家庭、成功且有目标的人。他们喜欢能向同龄人展现成功的顶级产品</p>
+</li>
+<li><p>体验者：追求多变和刺激、年轻、热情、有冲动的人。他们花费在时尚、娱乐和社交商</p>
+</li>
+<li>四种较低资源水平的群体</li>
+<li>有信仰者：有具体的信念、保守传统。对已有品牌忠诚（果粉，米粉）</li>
+<li>奋斗着： 资源有限、追求时髦、喜爱娱乐。喜欢时髦的产品，可以模仿拥有更多物质财富的人的消费</li>
+<li>生产者：喜欢用自己的双手工作、实际、脚踏实地、自给自足的人。使用目的和功能目的为主</li>
+<li>幸存者： 担心变化的年长人。对品牌忠诚</li>
+</ul>
+<p><img src="./img/6.jpg" alt=""></p>
+<p>营销者根据他们对VALS模型的理解运用到营销计划中</p>
+<ul>
+<li>行为细分</li>
+<li>需要和利益
+行为细分中，营销者根据消费者对产品的了解、态度、使用或反馈来将其划分成不同群体
+  狂热者、形象追求者、精明购物者、传统主义者、满意的尝试者、被征服者</li>
+</ul>
+<h2 id="-">细分组织市场的基础</h2>
+<p>根据一些消费者市场中的变量来细分组织市场，下表展示了一些比较重要的变量。</p>
+<p><img src="./img/7.jpg" alt=""></p>
+<h2 id="-">目标市场选择</h2>
+<p><strong><em>罗杰·贝斯特(Roger Best)</em></strong>建议的细分市场七步骤</p>
+<p><img src="./img/8.jpg" alt=""></p>
+<ul>
+<li>有效的市场细分标准</li>
+</ul>
+<p>并不是所有的市场细分方案都是有效的，我们可以将买盐的顾客分为金发和棕发的，但是头发颜色与买盐无关。想要有效，
+市场细分要做好五个关键指标</p>
+<p><strong><em>可测量</em></strong> 细分市场的规模、购买力和特征可以测量</p>
+<p><strong><em>足够大</em></strong> 细分市场的规模和利润大到值得为之服务。汽车制造商不会为身高为4英尺的人群设计并制造车辆</p>
+<p><strong><em>可进入</em></strong> 细分市场可以被有效地触及和服务</p>
+<p><strong><em>可区分</em></strong> 细分市场在概念上时刻区别的，已婚和未婚女性对香水的反映是类似的</p>
+<p><strong><em>可操作</em></strong> 能明确制定有效的方案以吸引和服务细分市场</p>
+<ul>
+<li>评估和选择细分市场
+在评估不同细分市场时，公司必须考虑两方面因素：细分市场的总体吸引力；公司的目标和资源
+营销者有一系列或李娜徐行的可能细分层次，可以知道他们的目标市场决策</li>
+</ul>
+<p>大众化市场-----&gt;定制化市场</p>
+<ul>
+<li>覆盖整个市场 : 大型公司才可以使用覆盖整个市场战略</li>
+<li><p>多元细分市场： 依照选择性专业化，公司会挑选有可能细分市场的一个子集。
+保洁推出佳洁士美白贴片,目标市场包括刚订婚的女性，即将成为新娘的女性和男同性恋者，飘柔去屑，海飞丝柔顺等</p>
+</li>
+<li><p>单一细分市场： 保时捷集中于跑车（成功），大众的辉腾（失败），公司可以通过生产，分销和推广的专业化来获取利益</p>
+</li>
+<li>个体细分市场： 细分到极致 ，私人定制，不是用每一个公司，汽车就很难实现</li>
+</ul></body>
+</html>
